@@ -1,0 +1,144 @@
+/* 모든 css */
+* {
+  margin: 0; /*모든 여백 삭제*/
+}
+
+/* body태그 css */
+body *,
+body,
+body::after,
+body::before {
+  margin: 0; /*모든 여백 삭제*/
+}
+
+/* 보통 카드 사이즈 css */
+.card-Normal {
+  margin: 20px 0 27px 21px; /* 여백을 주기, 상 하 좌 우(순서)*/
+  border: 1px solid var(--gray-500, #c4c4c4); /* 테두리 만들기 */
+  width: 243px; /* 넓이 */
+  height: 310px; /* 높이 */
+  position: fixed; /* 위치 고정 */
+  display: flex;
+  flex-direction: column; /* flex 정렬 */
+  align-items: center; /* 교차축 정렬 */
+}
+
+/* logo css */
+.normal-logo {
+  padding-top: 14px;
+}
+
+/* description css */
+.description {
+  width: 200px; /* 넓이 */
+  height: 27px; /* 높이 */
+  line-height: 150%; /* 줄 높이 */
+  font-size: 18px; /* 글자크기 */
+  line-height: 10px;
+  text-align: center; /* 글자 가운데 정렬 */
+  color: var(--grayscale-gray-5, #555); /* 글자색 */
+}
+
+.product {
+  position: relative;
+}
+
+/* button */
+.normal-button {
+  position: absolute;
+  width: 42px; /* 넓이 */
+  height: 42px; /* 높이 */
+  top: 248px; /* 위쪽 위치 조정 */
+  right: 180px; /* 오른쪽 위치 조정 */
+  border: none; /* 테두리 없애기 */
+  opacity: Opacity/20; /* 투명도 */
+  background-color: #00000033; /* 백그라운드 색상 */
+  cursor: pointer; /* 마우그 커서 올라가면 포인트 변경 */
+}
+
+i {
+  color: #f3f3f3;
+  font-weight: 900; /* 글자굵기 */
+}
+
+/* 문제점에 도착 */
+.normal-button:active {
+  position: absolute;
+  left: 20px; /* 왼쪽 이동 */
+  right: 100px; /* 오른쪽 이동 */
+  width: 112px; /* 넓이 */
+  height: 42px; /* 높이 */
+  flex-shrink: 0; /**/
+  background: var(--blue-600, #0074e9);
+}
+
+.normal-button:active::before {
+  content: "구매하기"; /* 콘텐츠 삽입 */
+  color: white;
+  padding: 13px; /* 안쪽여백 */
+  font-size: 14px;
+  gap: 16px; /* 요소차이 지정 */
+}
+
+/* wide 카드 */
+.card-Wide {
+  box-sizing: border-box;
+  width: 502px;
+  height: 310px;
+  border: 1px solid var(--gray-500, #c4c4c4);
+  position: relative;
+  left: 300px;
+  top: 20px;
+  display: flex;
+  padding: 20px;
+}
+
+.left {
+  padding-top: 55px;
+  padding-left: 45px;
+}
+
+.logo {
+  margin: 0;
+  padding: 0;
+}
+
+.description {
+  top: 13px;
+  display: inline;
+  position: relative;
+}
+
+.wide-product {
+  position: absolute;
+  left: 252px;
+}
+
+.wide-button {
+  position: absolute;
+  width: 42px; /* 넓이 */
+  height: 42px; /* 높이 */
+  border: none; /* 테두리 없애기 */
+  opacity: Opacity/20; /* 투명도 */
+  background-color: #00000033; /* 백그라운드 색상 */
+  cursor: pointer; /* 마우그 커서 올라가면 포인트 변경 */
+  top: 248px;
+}
+
+.wide-button:active {
+  position: absolute;
+  left: 20px; /* 왼쪽 이동 */
+  right: 100px; /* 오른쪽 이동 */
+  width: 112px; /* 넓이 */
+  height: 42px; /* 높이 */
+  flex-shrink: 0;
+  background: var(--blue-600, #0074e9);
+}
+
+.wide-button:active::before {
+  content: "구매하기";
+  color: white;
+  padding: 13px;
+  font-size: 14px;
+  gap: 16px;
+}
